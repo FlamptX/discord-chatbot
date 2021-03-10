@@ -15,7 +15,6 @@ extensions= [
 "commands",
 ]
 
-
 @client.event
 async def on_ready():
 	for extension in extensions:
