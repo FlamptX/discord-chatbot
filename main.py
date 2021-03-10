@@ -5,6 +5,7 @@ from discord.ext import commands
 from prsaw import RandomStuff
 
 client= commands.Bot(command_prefix="!!", case_insensitive=True)
+client.remove_command("help")
 re= RandomStuff()
 with open("config.json", "r") as f:
 	config= json.load(f)
