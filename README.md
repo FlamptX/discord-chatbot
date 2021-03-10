@@ -38,11 +38,11 @@ You need to create an application & bot in the [Discord Developer Portal](https:
 
 Follow [this](https://vimeo.com/509933655) guide to do so.
 
-Once you have the token, Simply open the `config.json` file and paste your token in the `TOKEN` key. Like so:
+Once you have the token, Simply open the `config.json` file and paste your token in the `token` key. Like so:
 
 ```json
 {
-    "TOKEN": "PASTE YOUR TOKEN HERE"
+    "token": "PASTE YOUR TOKEN HERE"
 }
 ```
 Finally start the bot by running this command:
@@ -81,6 +81,10 @@ If you add a credit card to Heroku (No need to pay anything, Just add a card). Y
 ## Contribution
 
 Pull requests are welcome! Feel free to contribute. For major changes, Open an issue first to discuss.
+
+## Acknowledgment
+
+This bot is perfect to be used on few servers. If you are planning to use it on MANY servers, It would be a bad idea. In that case, Please use a better database like MySQL, MongoDB etc.
 
 ## License
 [MIT](https://github.com/nerdguyahmad/discord-chatbot/blob/main/LICENSE)
