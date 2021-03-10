@@ -82,5 +82,9 @@ If you add a credit card to Heroku (No need to pay anything, Just add a card). Y
 
 Pull requests are welcome! Feel free to contribute. For major changes, Open an issue first to discuss.
 
+## Acknowledgment
+
+This bot is perfect to be used on few servers. If you are planning to use it on MANY servers, It would be a bad idea. In that case, Please use a better database like MySQL, MongoDB etc.
+
 ## License
 [MIT](https://github.com/nerdguyahmad/discord-chatbot/blob/main/LICENSE)
