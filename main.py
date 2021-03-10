@@ -1,5 +1,6 @@
 import discord
 import json
+import os
 from discord.ext import commands
 from prsaw import RandomStuff
 
@@ -24,7 +25,7 @@ async def on_ready():
 		os.system("cls")
 	else:
 		os.system('clear')
-		
+
 	print("[ Discord ChatBot ]\n")
 	print(f"\nCurrently Logged in as: {client.user.name}")
 	print(f"ID: {client.user.id}")
