@@ -64,7 +64,7 @@ Currently Logged in as: BOT NAME
 Client ID: 123456789
 ```
 
-The bot should be started. Use `!?setup` to start the setup.
+The bot should be started. Use `!!setchannel` to start the setup.
 
 ## Hosting
 
