@@ -7,7 +7,7 @@ from prsaw import RandomStuff
 
 client= commands.Bot(command_prefix="!!", case_insensitive=True)
 client.remove_command("help")
-rs= RandomStuff()
+rs= RandomStuff(async_mode=True)
 conn= sqlite3.connect("dbs/main.db")
 
 with open("config.json", "r") as f:
