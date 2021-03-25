@@ -101,11 +101,9 @@ class Commands(commands.Cog):
 				await ctx.send(":warning: Use the command again but mention the toggle correctly. i.e `on` or `off` For example: `!!settings toggle on` to toggle on, `!!settings toggle off` to toggle off.")
 				return
 
-			print("Line 103")
 			guildID= str(ctx.guild.id)
 			cur= conn.cursor()
 			r= cur.execute("SELECT toggle FROM main WHERE guild_id = '"+guildID+"'")
-			print("Line 107")
 			row= None
 			for row in r:
 				...
