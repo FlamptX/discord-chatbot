@@ -12,7 +12,7 @@ You need [Python 3.6+](https://python.org/)  to use this bot.
 
 ### Installation:
 
-Installation is pretty simple, Clone this repository. You can use `git` for easy cloning.
+Installation is pretty simple, Clone this repository. You can use `git clone` for easy cloning.
 
 ```git
 git clone https://github.com/nerdguyahmad/discord-chat-bot
