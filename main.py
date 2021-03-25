@@ -59,7 +59,7 @@ async def on_message(message):
 		elif row != None:
 			if message.channel.id == int(row[1]):
 				async with message.channel.typing():
-					response= rs.get_ai_response(message.content)
+					response= await rs.get_ai_response(message.content)
 				await message.channel.send(response)
 					
 			else:
