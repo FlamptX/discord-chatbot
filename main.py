@@ -62,7 +62,7 @@ async def on_message(message):
 					msg = message.content
 					if message.mentions != []:
 						for i in message.mentions:
-							msg = msg.replace(f'<@{i.id}>', i.name)
+							msg = msg.replace(f'<@!{i.id}>', i.name)
 							
 					response= await rs.get_ai_response(msg)
 				await message.channel.send(response)
