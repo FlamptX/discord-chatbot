@@ -1,6 +1,7 @@
 import discord
 import json
 import os
+import json
 import sqlite3
 from discord.ext import commands
 from prsaw import RandomStuff
