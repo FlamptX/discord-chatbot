@@ -59,12 +59,17 @@ async def on_message(message):
 		elif row != None:
 			if message.channel.id == int(row[1]):
 				async with message.channel.typing():
-					msg = message.content
-					if message.mentions != []:
-						for i in message.mentions:
-							msg = msg.replace(f'<@!{i.id}>', i.name)
-							
-					response= await rs.get_ai_response(msg)
+					try:
+						msg = message.content
+						if message.mentions != []:
+							for i in message.mentions:
+								msg = msg.replace(f'<@!{i.id}>', i.name)
+
+						response= await rs.get_ai_response(msg)
+					except json.decoder.JSONDecodeError:
+						await asyncio.sleep(3)
+						response= await rs.get_ai_response(msg)
+						
 				await message.channel.send(response)
 					
 			else:
