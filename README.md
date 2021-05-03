@@ -70,10 +70,12 @@ The bot should be started. Use `!!setchannel` to start the setup.
 
 To keep the bot online 24/7, You need to host your bot. This task can be done on your computer but you'll have to keep your PC on 24/7 which is difficult for majority of users. There are many options to host like buying a VPS though here are some options that are recommended for majority of users.
 
-#### Free (But Limited):
+#### Free (But Limited and Unrecommended):
 [Heroku](https://heroku.com) is a free option but your bot will stay online for 20-22 days in a month. Every month, you get free dynos which will restart your bot again.
 
 If you add a credit card to Heroku (No need to pay anything, Just add a card). Your bot will stay online 24/7 with no downtime.
+
+One drawback of heroku is that on every push your DB will be wiped. So, If you have multiple servers. You will lost the data of servers.
 
 #### Paid (But Cheap):
 [SomethingHost](https://something.host) is another option and is the recommended one. The cheapest plan of Discord Bot Hosting package will be perfect for you.
