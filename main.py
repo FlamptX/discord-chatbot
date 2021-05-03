@@ -42,7 +42,6 @@ async def on_message(message):
 		if message.content.lower().startswith('!!'):
 			await client.process_commands(message)
 
-
 		cur= conn.cursor()
 		guildID= str(message.guild.id)
 		r= cur.execute("SELECT * FROM main WHERE guild_id = '"+guildID+"'")
@@ -60,12 +59,17 @@ async def on_message(message):
 		elif row != None:
 			if message.channel.id == int(row[1]):
 				async with message.channel.typing():
-					msg = message.content
-					if message.mentions != []:
-						for i in message.mentions:
-							msg = msg.replace(f'<@!{i.id}>', i.name)
-							
-					response= await rs.get_ai_response(msg)
+					try:
+						msg = message.content
+						if message.mentions != []:
+							for i in message.mentions:
+								msg = msg.replace(f'<@!{i.id}>', i.name)
+
+						response= await rs.get_ai_response(msg)
+					except json.decoder.JSONDecodeError:
+						await asyncio.sleep(3)
+						response= await rs.get_ai_response(msg)
+						
 				await message.channel.send(response)
 					
 			else:
