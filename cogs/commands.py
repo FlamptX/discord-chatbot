@@ -91,7 +91,7 @@ class Commands(commands.Cog):
 	async def toggle(self, ctx, *, toggle = None):
 		if toggle == None:
 			await ctx.send(":warning: Use the command again but mention the toggle i.e `on` or `off` For example: `!!settings toggle on` to toggle on, `!!settings toggle off` to toggle off.")
-			await self.setchannel.reset_cooldown(ctx)
+			await self.toggle.reset_cooldown(ctx)
 		elif toggle != None:
 			if toggle.lower() == "on":
 				toggle = '1'
